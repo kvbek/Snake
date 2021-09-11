@@ -1,0 +1,24 @@
+body {
+    margin: 0;
+    justify-content: center;
+    background-color: black;
+}
+
+canvas {
+    padding-left: 0;
+    padding-right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    background-color: black;
+    border: 2px solid grey;
+    width: 35%;
+    height: 35%;
+}
+
+#score {
+    font-size: 3vw;
+    font-family: "Courier New", serif;
+    text-align: center;
+    color: white;
+}
