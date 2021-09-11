@@ -4,6 +4,7 @@ const ctx = canvas.getContext('2d');
 canvas.width = 500;
 canvas.height = 500;
 
+
 class Snake {
     constructor(snakeX, snakeY, width, height, color) {
         //this.x = x;
@@ -122,12 +123,12 @@ class Snake {
                     }
                 )
             }
-
             this.snakeBody[1].x = savedX;
             this.snakeBody[1].y = savedY;
             this.snakeBody.pop();
         }
     }
+    
     checkForCollisionWithTail() {
         for (let i = 1; i < this.snakeBody.length; i++) {
             if (this.snakeBody[0].x === this.snakeBody[i].x && this.snakeBody[0].y === this.snakeBody[i].y) {
@@ -226,6 +227,7 @@ const sleep = (milliseconds) => {
     return new Promise(resolve => setTimeout(resolve, milliseconds));
 }
 
+
 async function animate() {
     await sleep(100);
     requestAnimationFrame(animate);
@@ -242,26 +244,11 @@ async function animate() {
 }
 animate();
 
+
 document.addEventListener('keydown', (event) => {
     snake.move(event);
 });
 
+
 const snake = new Snake(canvas.width/5,canvas.height/5,20, 20, 'green');
 spawnApple();
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
